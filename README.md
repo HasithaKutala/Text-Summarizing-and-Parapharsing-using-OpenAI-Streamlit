@@ -1,6 +1,6 @@
 # Text summarizing and paraphrasing using OpenAI and Streamlit 
 
-**1. Setting up **
+**1.Setting up **
 
 Install and import all the required libraries 
 import openai 
