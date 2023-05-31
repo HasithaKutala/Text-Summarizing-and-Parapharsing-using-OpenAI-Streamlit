@@ -1,6 +1,6 @@
 # Text summarizing and paraphrasing using OpenAI and Streamlit 
 
-**1.Setting up **
+**1.Setting up**
 
 Install and import all the required libraries 
 import openai 
@@ -8,7 +8,7 @@ imnport streamlit as st
 
 Streamlit is a popular Python library used for building interactive web applications
 
-**2. Set the GPT-3 API key **
+**2.Set the GPT-3 API key**
 
 To use the OpenAI API, you will need to obtain an API key by signing up for a free account on the OpenAI website and creating a new API key. You can then use the API key in your code by setting it as the value of the openai.api_key variable. 
 The key should be private so we use package from streamlit called "st.secrets" which provides a way to securely store and access sensitive information, such as API keys, in Streamlit applications.
@@ -24,7 +24,7 @@ openai.api_key=st.secrets['pass'].
 
 - If you want you can add radio buttons to user to choose the desried option so we can use streamlit st.radio function. 
 
-**4. Generating the summary and paraphrasing **
+**4.Generating the summary and paraphrasing**
 
 
 First we start with checking the length of the article, if its length is greater than 100 then we will add button to click which will generate the summary. We use streamlit button function and info function to see the generated summary.
@@ -37,7 +37,7 @@ The create() method returns a response object that contains the generated text a
 
 - If you want to download the result we can use the streamlit download_button function to get summarised and paraphrased outputs.
 
-**5. Word count**
+**5.Word count**
 
 when the user generates the summary then the model gives us the word count of the input text and the summarised text. 
 -len(article_text.split()) gives you the count of words in the input: article_text string by splitting it into substrings based on whitespace and counting the number of resulting elements in the list.
