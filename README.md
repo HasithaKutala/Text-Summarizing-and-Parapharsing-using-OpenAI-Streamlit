@@ -27,19 +27,21 @@ openai.api_key=st.secrets['pass'].
 **4.Generating the summary and paraphrasing**
 
 
-First we start with checking the length of the article, if its length is greater than 100 then we will add button to click which will generate the summary. We use streamlit button function and info function to see the generated summary.
+- First we start with checking the length of the article, if its length is greater than 100 then we will add button to click which will generate the summary. We use streamlit button function and info function to see the generated summary.
 
-we will use OpenAI Completion API to generate a summary and paraphrasing of the article. The Completion class is an AI-powered text completion model that can generate text based on a prompt provided by the user. The create() method of the Completion class is called with several parameters: Model, prompt, max_tokens, temperature.
+- we will use OpenAI Completion API to generate a summary and paraphrasing of the article. The Completion class is an AI-powered text completion model that can generate text based on a prompt provided by the user. The create() method of the Completion class is called with several parameters: Model, prompt, max_tokens, temperature.
 
-The create() method returns a response object that contains the generated text as well as other metadata about the request. The response object is stored in the response variable for use later in the code.
+- The create() method returns a response object that contains the generated text as well as other metadata about the request. The response object is stored in the response variable for use later in the code.
 
--summary = response_summary["choices"][0]["text"] is used to extract the generated summary from the response received from the OpenAI language model.
+- summary = response_summary["choices"][0]["text"] is used to extract the generated summary from the response received from the OpenAI language model.
 
--If you want to download the result we can use the streamlit download_button function to get summarised and paraphrased outputs.
+- If you want to download the result we can use the streamlit download_button function to get summarised and paraphrased outputs.
 
 **5.Word count**
 
 when the user generates the summary then the model gives us the word count of the input text and the summarised text. 
--len(article_text.split()) gives you the count of words in the input: article_text string by splitting it into substrings based on whitespace and counting the number of resulting elements in the list.
--len(summary.split()) gives us the word count of summarized text:
--Then it can be displayed using st.info()
+- len(article_text.split()) gives you the count of words in the input: article_text string by splitting it into substrings based on whitespace and counting the number of resulting elements in the list.
+
+- len(summary.split()) gives us the word count of summarized text
+
+- Then it can be displayed using st.info()
