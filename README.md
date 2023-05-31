@@ -45,3 +45,12 @@ when the user generates the summary then the model gives us the word count of th
 - len(summary.split()) gives us the word count of summarized text
 
 - Then it can be displayed using st.info()
+
+**6.Output**
+
+To run the application, use the command "streamlit run app.py" which will open the app in the local browser. Users can input text to be summarized and select the desired summary length (short, medium, or long). Clicking the "Generate Summary" button will display the summarized output. Users can also adjust the temperature to control the randomness of the generated text. Additionally, users can choose paraphrasing options: "Synonyms" for accurate results with fewer changes or "More Changes" for less accuracy. Finally, users have the option to download the paraphrased and summarized outputs.
+
+**7. Some ideas for further development**
+
+- Language selection : which will allow users to select the language in which they want the text to be summarized or paraphrased.
+- Grammar and Language Correction: Integrate a grammar and language correction feature to improve the quality of the generated summaries and paraphrases.
