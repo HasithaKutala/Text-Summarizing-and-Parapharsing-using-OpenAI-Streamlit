@@ -22,7 +22,7 @@ openai.api_key=st.secrets['pass'].
 
 - Now we will create text area for user to enter Streamlit’s text_area function
 
-- If you want you can add radio buttons to user to choose the desried option so we can use streamlit st.radio function. 
+- We’ll also add a radio button that allows the user to choose the desired output size, with three options available: “To-The-Point”, “Concise”, and “Detailed”.
 
 **4.Generating the summary and paraphrasing**
 
@@ -35,7 +35,7 @@ The create() method returns a response object that contains the generated text a
 
 -summary = response_summary["choices"][0]["text"] is used to extract the generated summary from the response received from the OpenAI language model.
 
-- If you want to download the result we can use the streamlit download_button function to get summarised and paraphrased outputs.
+-If you want to download the result we can use the streamlit download_button function to get summarised and paraphrased outputs.
 
 **5.Word count**
 
